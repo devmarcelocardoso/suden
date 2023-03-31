@@ -33,5 +33,4 @@ jobs:
         user: suden-rs2
         password: Su3455re0136!#
         localDir: "public_html/staging"
-        remoteDir: "public_html/staging"
         forceSsl: true
