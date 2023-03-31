@@ -33,3 +33,4 @@ jobs:
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASSWORD }}
         localDir: "public_html/staging"
+        remoteDir: "public_html/staging"
