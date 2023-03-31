@@ -1,24 +1,28 @@
+name: Deploy via ftp
+
 on:
   push:
-    branches:
-      -develop
-name: Deploy via ftp
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
+    branches: ["develop"]
 
-    - name: Use Node.js 18
-      uses: actions/setup-node@v2
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: '18'
-      
-    - name: Build Project
-      run:
-        npm install
-        npm run build
+        node-version:  ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
     
     - name: List output files
       run: find build/ -print
