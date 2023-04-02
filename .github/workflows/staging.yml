@@ -1,0 +1,33 @@
+name: Deploy via ftp
+
+on:
+  push:
+    branches: ["staging"]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version:  ${{ matrix.node-version }}
+        cache: 'yarn'
+    - run: yarn install
+    - run: yarn run build --if-present
+
+    - name: FTP Deploy Locaweb
+      uses: locaweb/ftp-deploy@1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USER }}
+        password: ${{ secrets.PASSWORD }}
+        remoteDir: "public_html/staging"
+        localDir: "build/"
