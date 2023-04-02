@@ -1,4 +1,4 @@
-name: Deploy via ftp
+name: Staging deploy
 
 on:
   push:
