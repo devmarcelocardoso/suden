@@ -2,7 +2,7 @@ name: Deploy via ftp
 
 on:
   push:
-    branches: ["develop", "staging", "main"]
+    branches: ["staging"]
 
 jobs:
   build:
@@ -11,22 +11,9 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [18.x]
 
     steps:
-    - name: Get branch name (merge)
-      if: github.event_name != 'pull_request'
-      shell: bash
-      run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/} | tr / -)" >> $GITHUB_ENV
-
-    - name: Get branch name (pull request)
-      if: github.event_name == 'pull_request'
-      shell: bash
-      run: echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF} | tr / -)" >> $GITHUB_ENV
-
-    - name: Debug
-      run: echo ${{ env.BRANCH_NAME }}
-
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -42,5 +29,5 @@ jobs:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASSWORD }}
-        remoteDir: "public_html/${{ env.BRANCH_NAME }}"
+        remoteDir: "public_html/staging"
         localDir: "build/"
