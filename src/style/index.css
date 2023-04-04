@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Droid+Sans&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Doppio+One&display=swap');
+*{
+  font-family: droid sans;
+}
 
-body{
-  background-color: #EAE9E9;
+.partners-bg{
+  background-image: url('images/partners-bg.svg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.active{
+  background-color: green;
 }
