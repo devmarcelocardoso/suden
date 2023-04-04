@@ -21,12 +21,9 @@ function Partners(){
                     <p className='sm:text-xl text-base text-black'>Lorem ipsum dolor amet</p>
                   </label>
                 </>
-                <Secondary
-                  value='Fale conosco'
-                  className='border hover:bg-black hover:text-yellow'
-                  href='https://wa.me/5551999673527'
-                  target='blank'
-                />
+                <a href='https://wa.me/5551999673527' target='blank' className='sm:block hidden'>
+                  <Secondary value='Fale conosco' className='border hover:bg-black hover:text-yellow'/>
+                </a>
               </div>
             </main>
           </>
