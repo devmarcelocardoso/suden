@@ -4,7 +4,7 @@ import Primary from "../buttons/primary";
 function Form(){
   return(
     <>
-      <form className='flex flex-col items-end gap-6'>
+      <form className='flex flex-col items-center gap-6'>
         <Input placeholder='Nome e Sobrenome'/>
         <Input placeholder='Cargo'/>
         <Input placeholder='Empresa'/>
