@@ -4,6 +4,7 @@
 @tailwind utilities;
 *{
   font-family: droid sans;
+  scroll-behavior: smooth;
 }
 
 .partners-bg{
