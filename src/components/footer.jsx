@@ -15,10 +15,12 @@ function Footer(){
           </div>
         </>
         <>
-          <div className='flex justify-end items-center gap-2 text-lg text-black'>
-            <span>Voltar ao início</span>
-            <span><Icon icon='iconoir:fast-arrow-up' height='24' /></span>
-          </div>
+          <a href='#header'>
+            <div className='flex justify-end items-center gap-2 text-lg text-black-700 hover:text-black transition duration-150'>
+              <span>Voltar ao início</span>
+              <span><Icon icon='iconoir:fast-arrow-up' height='24' /></span>
+            </div>
+          </a>
         </>
       </section>
     </>
