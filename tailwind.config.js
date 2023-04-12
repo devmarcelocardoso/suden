@@ -15,6 +15,7 @@ module.exports = {
       green: '#00923F',
       'green-500': '#80C99F',
       yellow: '#FFCA08',
+      linkedin: '#0A66C2'
     },
     fontFamily: {
       doppio: ['Doppio One', 'sans-serif']

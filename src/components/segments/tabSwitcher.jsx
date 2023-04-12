@@ -11,7 +11,7 @@ function TabSwitcher({tabs}){
           <content className='grid justify-items-end sm:gap-2 gap-6 h-fit'>
             { tabs?.map(tab => (
               <button
-                className='flex items-center gap-2 hover:text-green sm:text-lg'
+                className='flex items-center gap-2 text-black-700 hover:text-green sm:text-lg'
                 key={tab.id}        
                 onClick={() => setSelectedId(tab.id)}
                 style={selectedId === tab.id ? {
@@ -25,12 +25,12 @@ function TabSwitcher({tabs}){
               </button>
             )) }
           </content>
-          <article className='flex flex-col space-y-4 sm:w-96' key={selectedId}>
+          <article className='flex flex-col sm:space-y-4 space-y-0 sm:w-96' key={selectedId}>
             <h1 className='flex items-center gap-2 text-green'>
               {selectedTab.icon}
               <label className='sm:text-2xl text-xl'>{selectedTab.header}</label>
             </h1>
-            {selectedTab.content}
+            <p className='sm:text-lg text-sm'>{selectedTab.content}</p>
           </article>
         </>
       </section>
