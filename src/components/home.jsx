@@ -8,9 +8,10 @@ function Home(){
     <>
       <section id='home' className='h-fit flex justify-between gap-4'>
         <>
-          <main className='flex flex-col justify-center gap-6 w-[620px]'>
-            <h1 className='sm:text-6xl text-4xl text-green font-bold'>Lorem ipsum dolor</h1>
-            <p className='sm:text-gl text-base text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque placerat purus ac mollis. Etiam iaculis auctor dui sed tincidunt. Ut vel dolor erat. Praesent imperdiet vehicula congue. In suscipit Nunc aliquet efficitur lacus, sed malesuada nibh fringilla eget. Suspendisse.</p>
+          <main className='flex flex-col justify-center sm:gap-6 gap-0 w-[620px]'>
+            <h1 className='sm:text-6xl text-3xl text-green font-bold'>Foco e experiência</h1>
+            <p className='sm:text-lg text-sm text-black'>A Suden Representações foi criada em 2019, com foco e experiência no atendimento do segmento industrial, de produtos eletroeletrônicos e eletromecânicos e assessoramento técnico e comercial para os clientes. Com o objetivo de sermos referência no mercado do Rio Grande do Sul na prestação desse serviço junto de nossos parceiros.
+</p>
           </main>
         </>
         <img src={homeBg} className='w-64 sm:block hidden' alt='World network'/>

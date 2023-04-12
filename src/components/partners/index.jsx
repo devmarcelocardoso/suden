@@ -5,15 +5,15 @@ function Partners(){
 
   return(
     <>
-      <section id='partners' className='h-screen partners-bg flex flex-col justify-center space-y-16 '>
-        <section className='space-y-20'>
+      <section id='partners' className='flex flex-col justify-center sm:h-screen py-4 partners-bg'>
+        <section className='sm:space-y-20 space-y-6'>
           <>
-            <main className='bg-yellow px-8 py-4'>
+            <main className='bg-yellow px-4 py-2'>
               <div className='flex justify-between items-center'>
                 <>
                   <label>
                     <h1 className='sm:text-3xl text-xl text-black font-bold'>Parceiros</h1>
-                    <p className='sm:text-xl text-base text-black'>Lorem ipsum dolor amet</p>
+                    <p className='sm:text-xl text-base text-black'>Empresas ao redor do mundo</p>
                   </label>
                 </>
                 <a href='#contact' className='sm:block hidden'>

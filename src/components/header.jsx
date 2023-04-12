@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react';
-import logo from '../style/images/logo.svg'
-import Secondary from './buttons/secondary';
+import { ReactComponent as Logotipo } from '../style/images/logotipo.svg'
 import { useState } from 'react';
 import MenuMobile from './menuMobile';
 
@@ -11,14 +10,12 @@ function Header(){
     <>
       <header id='header' className='flex justify-between items-center'>
         <>
-          <img src={logo} className='sm:w-40 w-32' alt='Suden Representações'/>
-          <a href='#contact' className='hidden sm:block'>
-            <Secondary value='Contato' className='block border hover:bg-black hover:text-black-100'/>
-          </a>
+          <Logotipo/>
+          <a href='#contact' className='sm:block hidden text-black-700 hover:text-black'>Contato</a>
           <content className='sm:hidden text-black-100 transition ease-in-out duration-300'>
             <span onClick={() => setShow(!show)}>
               { show ?
-                <div className='w-full h-full bg-black absolute top-0 left-0 flex'>
+                <div className='w-full h-full bg-black absolute top-0 left-0 right-0'>
                   <MenuMobile/>
                   <Icon
                     icon='iconoir:cancel'
