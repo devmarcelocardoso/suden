@@ -1,13 +1,13 @@
-import Header from "./components/header";
-import Home from "./components/home";
-import Partners from "./components//partners/index";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
+import Header from "./sections/header";
+import Home from "./sections/home";
+import Partners from "./sections/partners";
+import Contact from "./sections/contact";
+import Footer from "./sections/footer";
 
 function Main(){
   return(
     <>
-      <main className='mx-2.5 my-1.5 sm:mx-10 sm:my-5 space-y-6'>
+      <main className='sm:px-10 sm:py-5 px-2.5 py-1.5 sm:space-y-10 space-y-6 bg-black-100'>
         <Header/>
         <Home/>
         <Partners/>
