@@ -1,16 +1,15 @@
-  import logo from "../style/images/logo.svg"
 import { Icon } from "@iconify/react";
+import { ReactComponent as Logo } from "../style/images/logo.svg"
 
 function Footer(){
   return(
     <>
-      <section className='flex sm:flex-row sm:justify-between justify-center items-center flex-col bg-black-200 p-10 text-xs'>
+      <section className='flex sm:flex-row flex-col sm:justify-between justify-center items-center gap-4 p-10 text-xs bg-black-200'>
         <>
           <div>
-            <img src={logo} className='w-40' alt='Suden Representações'/>
-            <span className='flex flex-col my-2'>
-              <label>Suden Representações LTDA</label>
-              <label>© 2023</label>
+            <Logo className='w-40'/>
+            <span className='mt-1'>
+              <label>©2023 Suden Representações</label>
             </span>
           </div>
         </>

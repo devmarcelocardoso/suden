@@ -2,18 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 *{
   font-family: droid sans;
   scroll-behavior: smooth;
 }
 
-.partners-bg{
-  background-image: url('images/partners-bg.svg');
-  background-size: 80%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.active{
-  background-color: green;
+button:disabled{
+  background-color: #929090;
 }
