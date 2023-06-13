@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Recebimento</title>
+    <style>
+      @font-face {
+        font-family: 'Droid Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/droidsans/v18/SlGVmQWMvZQIdix7AFxXkHNSbQ.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      /* Estilos de base */
+      body {
+        font-family: 'Droid Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 0;
+        background: #EAE9E9;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #242021;
+        padding: 32px;
+      }
+
+      .footer{
+        font-size: 14px;
+        line-height: 20px;
+        background-color: #D3D2D3;
+        color: #666364;
+      }
+
+      /* Estilos de espaçamento */
+      .content{
+        padding: 32px;
+      }
+
+      .message{
+        margin-top: 20px;
+        color: #242021;
+      }
+
+      .imagotipo{
+        margin-bottom: 32px;
+      }
+
+      .address{
+        margin-top: 32px;
+      }
+
+      .ii{
+        margin-top: 32px;
+      }
+      /* Estilos de texto */
+      .nome{
+        color: #EAE9E9;
+      }    
+
+      h1 {
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: bold;
+        color: #242021;
+        margin: 0;
+      }
+
+      p{
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0;
+      }
+
+      .att > p {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+        margin: 0;
+        color: #242021;
+      }
+      
+      .copyright{
+        font-size: 10px;
+        margin: 0;
+      }
+
+      .address > p{
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+      }
+
+      /* Estilos de links */
+      .button {
+        display: inline-block;
+        background-color: #80C99F;
+        color: #242021;
+        margin-top: 20px;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .button:hover{
+        background-color: #00923F;
+        color: #EAE9E9; 
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+      .ii a{
+        color: #242021;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="nome">Olá, {{ name }}</h1>
+      </div>
+      <div class="content">
+        <div>
+          <h1>Recebemos sua mensagem!</h1>
+          <p class="message">Agradecemos seu contato! Nosso objetivo é facilitar suas decisões e atender suas necessidades. Qualquer dúvida, não hesite em entrar em contato conosco.</p>
+        </div>
+        <div class="ii">
+          <h1>Deseja ser nosso cliente ou parceiro?</h1>
+          <a class="button" href="https://wa.me/555199967352" target="_blank">Fale conosco pelo WhatsApp</a>
+        </div>
+      </div>
+      <div class="content footer">
+        <a href="https://staging.suden-rs.com.br" target="_blank"><img src="cid:logotipo" alt="Suden Representações LTDA" /></a>
+        <div class="address">
+          <p>©2023 Suden Representações LTDA - 34.559.806/0001-36</p>
+          <p>Rua Tomaz Flores 191. Porto Alegre, Rio Grande do Sul, Brasil</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
