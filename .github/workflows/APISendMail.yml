@@ -1,8 +1,8 @@
-name: Staging deploy
+name: API deploy
 
 on:
   push:
-    branches: ["staging"]
+    branches: ["APISendMail"]
 
 jobs:
   build:

@@ -40,24 +40,24 @@
     try {
       //Server settings
       $mail->CharSet = 'UTF-8'; 
-      $mail->SMTPDebug = SMTP::DEBUG_OFF;                                                      //Enable verbose debug output
-      $mail->isSMTP();                                                                         //Send using SMTP
-      $mail->Host       = 'smtp-relay.sendinblue.com';                                         //Set the SMTP server to send through
-      $mail->SMTPAuth   = true;                                                                //Enable SMTP authentication
-      $mail->Username   = 'devmarcelocardoso@gmail.com';                                       //SMTP username
-      $mail->Password   = 'ASDSA6546#$!sdf02+';                                                //SMTP password
-      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;                                      //Enable implicit TLS encryption
-      $mail->Port       = 587;                                                                 //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+      $mail->SMTPDebug = SMTP::DEBUG_OFF;                              //Enable verbose debug output
+      $mail->isSMTP();                                                 //Send using SMTP
+      $mail->Host       = 'smtp-relay.sendinblue.com';                 //Set the SMTP server to send through
+      $mail->SMTPAuth   = true;                                        //Enable SMTP authentication
+      $mail->Username   = 'devmarcelocardoso@gmail.com';               //SMTP username
+      $mail->Password   = 'ASDSA6546#$!sdf02+';                        //SMTP password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;              //Enable implicit TLS encryption
+      $mail->Port       = 587;                                         //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
       //Recipients
       $mail->setFrom('devmarcelocardoso@gmail.com', 'Suden');
-      $mail->addAddress($email);     //Add a recipient
+      $mail->addAddress($email);                                       //Add a recipient
 
       //Attachments
       $mail->addEmbeddedImage(__DIR__ . DIRECTORY_SEPARATOR . "templates" .  DIRECTORY_SEPARATOR . "assets" . DIRECTORY_SEPARATOR . "logotipo.png" , "logotipo", "logotipo.png");        //Add attachments
 
       //Content
-      $mail->isHTML(true);                                  //Set email format to HTML
+      $mail->isHTML(true);                                             //Set email format to HTML
       $mail->Subject = $subject;
       $mail->Body    = $body;
 
