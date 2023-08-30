@@ -1,7 +1,7 @@
 import Header from "./sections/header";
 import Home from "./sections/home";
 import Partners from "./sections/partners";
-import Contact from "./sections/contact";
+// import Contact from "./sections/contact";
 import Footer from "./sections/footer";
 
 function Main(){
@@ -11,7 +11,7 @@ function Main(){
         <Header/>
         <Home/>
         <Partners/>
-        <Contact/>
+        {/* <Contact/> */}
       </main>
       <Footer/>
     </>

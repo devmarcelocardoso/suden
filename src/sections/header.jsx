@@ -8,7 +8,7 @@ function Header(){
       <header id='header' className='flex justify-between items-end'>
         <>
           <Logotipo className='sm:w-28 w-20'/>
-          <a href='#contact' className='sm:text-lg text-md text-black-700 hover:text-black'>Contato</a>
+          {/* <a href='#contact' className='sm:text-lg text-md text-black-700 hover:text-black'>Contato</a> */}
         </>
       </header>
     </>
